@@ -24,11 +24,31 @@ for (const btn of allBtn) {
             totalCost();
             grandTotal();
             grandTotal(status);
+            seatAvaliable();
+
             }
             
             
         })
     }
+
+    function buyTicketButton() {
+        document.getElementById('paribahan').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function seatAvaliable(){
+        const phoneNumber=document.getElementById("phone");
+        phoneNumber.addEventListener("keyup",function(){
+
+            const seatUp=getConvertedValue("SeatIncrease");
+            if(seatUp!==0 && phoneNumber.value!=''){
+                const nextBtn=document.getElementById("btnNext");
+                nextBtn.removeAttribute("disabled");
+    
+            }
+        })
+    }
+
 
     function grandTotal(status){
         const totalCost=getConvertedValue("totalCost");

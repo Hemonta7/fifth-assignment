@@ -44,15 +44,16 @@
     </nav>
   </header>
   <main>
-    <section>
-      <div class="banner-container flex flex-col justify-center items-center gap-8 relative">
+    <section class="w-[1171px] mx-auto">
+      <div class="relative">
+      <div class="banner-container flex flex-col justify-center items-center gap-8">
         <h2 class="text-6xl font-extrabold text-white">End-to-End Travel with</h2>
         <h2 class=" text-6xl font-extrabold common-color">P Paribahan</h2>
         <p class="text-lg font-normal font-inter text-white">Yes, you can run unit tests and view the results directly
           within the app. The integrated testing features allow for a streamlined .</p>
-        <button class="btn rounded-xl text-black bg-[#1DD100] border-none text-xl font-bold">Buy Tickets</button>
+        <button onclick="buyTicketButton()" class="btn rounded-xl text-black bg-[#1DD100] border-none text-xl font-bold">Buy Tickets</button>
       </div>
-      <div class="flex gap-8 absolute">
+      <div class="flex gap-8 absolute -bottom-14 justify-center w-full">
         <!-- div:1  -->
         <div class="flex gap-3 w-80 h-32 bg-white rounded-3xl border-b-4 border-[#1DD100] justify-center items-center">
           <div>
@@ -85,6 +86,7 @@
         </div>
 
       </div>
+    </div>
     </section>
     <section class="w-[1171px] mx-auto mt-44 mb-28">
       <h2 class="text-center text-4xl font-bold">Best offers for you</h2>
@@ -120,7 +122,7 @@
         <button class="btn text-[#1DD100] bg-white border-[#1DD100]">See All Offers</button>
       </div>
     </section>
-    <section class="rounded-t-[60px] border-t-2 border-[#1DD100] bg-[#F7F8F8] w-full">
+    <section id="paribahan" class="rounded-t-[60px] border-t-2 border-[#1DD100] bg-[#F7F8F8] w-full">
       <div class="w-[1171px] mx-auto">
         <h2 class="text-center mt-28 mb-6 text-4xl font-bold">P.H Paribahan</h2>
         <p class="text-center mb-12 text-lg font-normal">Yes, you can run unit tests and view the results directly
@@ -337,11 +339,11 @@
               <h1 class="text-base font-semibold font-inter mb-4">Passenger Name*</h1>
               <input type="text" placeholder="Enter your name" class="input input-bordered w-full mb-6" />
               <h1 class="text-base font-semibold font-inter mb-4">Phone Number*</h1>
-              <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full mb-6" />
+              <input id="phone" type="number" placeholder="Enter your phone number" class="input input-bordered w-full mb-6" />
               <h1 class="text-base font-semibold font-inter mb-4">Email ID</h1>
               <input type="email" placeholder="Enter your email id" class="input input-bordered w-full mb-6" />
             </div>
-            <button disabled class="btn w-full bg-[#1DD100] text-white text-xl font-extra">Next</button>
+            <button id="btnNext" disabled class="btn w-full bg-[#1DD100] text-white text-xl font-extra">Next</button>
             <div class="flex gap-12 ml-8 mt-6">
               <a href="#">Terms and Conditions</a>
               <a href="#">Cancellation Policy</a>
